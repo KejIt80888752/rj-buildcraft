@@ -35,7 +35,6 @@ All of these are invented stand-ins — swap them for the real details:
 |---|---|
 | `info@rjbuildcraft.com`, `sales@rjbuildcraft.com` | both HTML files |
 | Working hours | both HTML files |
-| "Since 2012" hero pill | `index.html` |
 | Social links (`href="#"`) | footer of both files |
 | Map location | `contact.html` → the `<iframe src>` query |
 | Stats (480+, 24, 13+, 98%) | `index.html` → `data-count` attributes |
@@ -45,6 +44,7 @@ All of these are invented stand-ins — swap them for the real details:
 
 ## Confirmed real details
 
+- Founded: **2024** (hero pill)
 - Phone: **+91 76766 98471** (primary, also the WhatsApp number) and **+91 85535 71895**
 - Office: **BHIVE Premium, CMH Road Campus**, No. 467/468, Shri Krishna Temple Rd,
   Indiranagar 1st Stage, Bengaluru 560038
