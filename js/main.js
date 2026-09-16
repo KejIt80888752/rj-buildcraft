@@ -69,44 +69,6 @@
     }
   }
 
-  /* ---------- Animated counters ---------- */
-  var counters = $$('[data-count]');
-  if (counters.length && 'IntersectionObserver' in window) {
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    var run = function (el) {
-      var target = parseInt(el.getAttribute('data-count'), 10) || 0;
-      var suffix = el.getAttribute('data-suffix') || '';
-      if (reduce) { el.textContent = target + suffix; return; }
-
-      var duration = 1600;
-      var start = null;
-
-      var tick = function (ts) {
-        if (start === null) start = ts;
-        var p = Math.min((ts - start) / duration, 1);
-        var eased = 1 - Math.pow(1 - p, 3);            // easeOutCubic
-        el.textContent = Math.round(target * eased) + suffix;
-        if (p < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-    };
-
-    var co = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        run(entry.target);
-        co.unobserve(entry.target);
-      });
-    }, { threshold: 0.4 });
-
-    counters.forEach(function (el) { co.observe(el); });
-  } else {
-    counters.forEach(function (el) {
-      el.textContent = el.getAttribute('data-count') + (el.getAttribute('data-suffix') || '');
-    });
-  }
-
   /* ---------- Material category search ---------- */
   var search = $('#materialSearch');
   if (search) {
