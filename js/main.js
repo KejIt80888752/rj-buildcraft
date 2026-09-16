@@ -238,7 +238,7 @@
         'Service: ' + $('#service').value + '\n' +
         'Details: ' + $('#message').value.trim();
 
-      window.open('https://wa.me/919876543210?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+      window.open('https://wa.me/917676698471?text=' + encodeURIComponent(msg), '_blank', 'noopener');
 
       var original = submitBtn.innerHTML;
       submitBtn.disabled = true;

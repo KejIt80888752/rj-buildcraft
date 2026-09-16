@@ -33,10 +33,9 @@ All of these are invented stand-ins — swap them for the real details:
 
 | Placeholder | Where |
 |---|---|
-| `+91 98765 43210` / `43211` | both HTML files, `js/main.js` (WhatsApp link) |
 | `info@rjbuildcraft.com`, `sales@rjbuildcraft.com` | both HTML files |
-| `No. 24, Main Road, Industrial Area, Bengaluru…` | both HTML files |
 | Working hours | both HTML files |
+| "Since 2012" hero pill | `index.html` |
 | Social links (`href="#"`) | footer of both files |
 | Map location | `contact.html` → the `<iframe src>` query |
 | Stats (480+, 24, 13+, 98%) | `index.html` → `data-count` attributes |
@@ -44,11 +43,12 @@ All of these are invented stand-ins — swap them for the real details:
 | Project photos | `index.html` → `.project-img` background URLs (currently Unsplash) |
 | Hero / about photos | `css/style.css` → `.hero-bg`, `.about-img`, `.page-hero` |
 
-Replace all phone numbers at once:
+## Confirmed real details
 
-```bash
-cd /Users/saran/Downloads/Files/rj-buildcraft && grep -rl "9876543210\|98765 43210" . | xargs sed -i '' 's/9876543210/YOURNUMBER/g; s/98765 43210/YOUR NUMBER/g'
-```
+- Phone: **+91 76766 98471** (primary, also the WhatsApp number) and **+91 85535 71895**
+- Office: **BHIVE Premium, CMH Road Campus**, No. 467/468, Shri Krishna Temple Rd,
+  Indiranagar 1st Stage, Bengaluru 560038
+- Live at **https://randjbuildcraft.com** (GitHub Pages, repo `KejIt80888752/rj-buildcraft`)
 
 ## Photos
 
